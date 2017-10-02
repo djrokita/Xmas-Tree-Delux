@@ -1,21 +1,34 @@
 var treeHeight = 0;
 
 function drawTree(n) {
-	var licznik = n - 1;
 	var star = '';
+	var licznik = 0;
 
-	for (i = 0; i < n; i++) {
-		for (l = 0; l < licznik; l++) {
+	for (var i = n; i > 0; i--) {
+		for (var l = 0; l < i - 1; l++) {
 			star += ' ';
 		}
 		star += '* ';
-		for (k = 0; k < i; k++) {
+		for (var k = 0; k < licznik; k++) {
+			star += '* ';
+		}	
+		console.log(star);
+		star = '';
+		licznik++;
+	}
+	//Dla licznik = n
+	/*for (var i = 0; i < n; i++) {
+		for (var l = 0; l < licznik - 1; l++) {
+			star += ' ';
+		}
+		star += '* ';
+		for (var k = 0; k < i; k++) {
 			star += '* ';
 		}	
 		console.log(star);
 		star = '';
 		licznik--;
-	}
+	}*/
 }
 
 function getNumber() {
