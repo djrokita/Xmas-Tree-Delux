@@ -1,8 +1,8 @@
 var treeHeight = 0;
 
 function drawTree(n) {
-	licznik = n - 1;
-	star = '';
+	var licznik = n - 1;
+	var star = '';
 
 	for (i = 0; i < n; i++) {
 		for (l = 0; l < licznik; l++) {
@@ -10,7 +10,7 @@ function drawTree(n) {
 		}
 		star += '* ';
 		for (k = 0; k < i; k++) {
-				star += '* ';
+			star += '* ';
 		}	
 		console.log(star);
 		star = '';
